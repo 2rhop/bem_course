@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Card.scss";
+import { THEMES } from "../data";
 
 class Card extends Component {
   render() {
@@ -13,37 +14,39 @@ class Card extends Component {
       serving
     } = this.props.data;
     return (
-      <div className={`card ${theme || ""}`}>
-        <div className="header">
-          <span className="close-btn"></span>
+      <div className={`card ${theme || THEMES.LIGHT}`}>
+        <div id="header">
+          <span id="close-btn">X</span>
           <img src={imageUrl} alt={title} />
         </div>
-        <div className="body">
-          <h3>{title}</h3>
-          <div className="info-box">
-            <div>
-              <span>
-                <i class="fas fa-hourglass-start"></i> {duration}
-              </span>
-              <h4>Minutes</h4>
+        <div id="wrapper">
+          <div id="body">
+            <h2>{title}</h2>
+            <div id="info-box">
+              <div>
+                <span>
+                  <i class="fas fa-hourglass-start"></i> <span>{duration}</span>
+                </span>
+                <h4>Minutes</h4>
+              </div>
+              <div>
+                <span>
+                  <i class="fas fa-book"></i> <span>{ingredients}</span>
+                </span>
+                <h4>Ingredients</h4>
+              </div>
+              <div>
+                <span>
+                  <i class="fas fa-user-friends"></i> <span>{serving}</span>
+                </span>
+                <h4>Serving</h4>
+              </div>
             </div>
-            <div>
-              <span>
-                <i class="fas fa-book"></i> {ingredients}
-              </span>
-              <h4>Ingredients</h4>
-            </div>
-            <div>
-              <span>
-                <i class="fas fa-user-friends"></i> {serving}
-              </span>
-              <h4>Serving</h4>
-            </div>
+            <p>{content}</p>
           </div>
-          <p>{content}</p>
-        </div>
-        <div className="footer">
-          <button>View Recipe</button>
+          <div id="footer">
+            <button>View Recipe</button>
+          </div>
         </div>
       </div>
     );

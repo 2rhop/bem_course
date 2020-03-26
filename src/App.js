@@ -1,5 +1,4 @@
 import React from "react";
-import "./sass/main.scss";
 import "./App.scss";
 import Card from "./components/Card";
 import { cardCollection } from "./data";
