@@ -1,0 +1,28 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: inherit;
+}
+
+html {
+  font-size: 62.5%; // means 10px = 1rem
+}
+
+body {
+  line-height: 1.2;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  color: $font-color;
+  font-size: 1.6rem;
+  font-family: "Raleway", sans-serif;
+  background-color: $bg-color;
+  letter-spacing: 0.15rem;
+}
+
+html,
+body {
+  height: 100%;
+}
