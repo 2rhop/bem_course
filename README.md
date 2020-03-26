@@ -1,6 +1,6 @@
 # BEM Course's demo
 
-### This is the demonstation code wich is part of the BEM training course.
+### This is the demonstation code which is part of the BEM training course.
 
 ## Get started
 
