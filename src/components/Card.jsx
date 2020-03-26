@@ -15,14 +15,14 @@ class Card extends Component {
     } = this.props.data;
     return (
       <div className={`card ${theme || THEMES.LIGHT}`}>
-        <div id="header">
-          <span id="close-btn">X</span>
+        <div class="card__header">
+          <span class="card__close-btn">X</span>
           <img src={imageUrl} alt={title} />
         </div>
-        <div id="wrapper">
-          <div id="body">
-            <h2>{title}</h2>
-            <div id="info-box">
+        <div class="card__wrapper">
+          <div class="card__body">
+            <h2 className="card__title">{title}</h2>
+            <div class="inline-wrapper">
               <div>
                 <span>
                   <i class="fas fa-hourglass-start"></i> <span>{duration}</span>
@@ -44,8 +44,8 @@ class Card extends Component {
             </div>
             <p>{content}</p>
           </div>
-          <div id="footer">
-            <button>View Recipe</button>
+          <div class="card__footer">
+            <button className="card__button">View Recipe</button>
           </div>
         </div>
       </div>

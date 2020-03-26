@@ -1,6 +1,6 @@
 export const THEMES = {
-  DARK: "dark",
-  LIGHT: "light"
+  DARK: "card--dark",
+  LIGHT: "card--light"
 };
 
 export const cardCollection = [

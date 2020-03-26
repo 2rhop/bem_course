@@ -2,7 +2,6 @@
 
 .card {
   width: 38rem;
-  background-color: $white-color;
   border-radius: 0.5rem;
   overflow: hidden;
   box-shadow: 3px 1px 15px 1px transparentize($black-color, 0.8);
@@ -14,37 +13,41 @@
     box-shadow: 5px 5px 15px 3px transparentize($black-color, 0.8);
   }
 
-  &:hover #header img {
+  &:hover &__header img {
     transform: scale(1.1);
     filter: grayscale(0%);
   }
-}
 
-.card.dark {
-  background-color: lighten($black-color, 15);
-  color: $white-color;
-
-  h2 {
-    border-bottom-color: $white-color !important;
+  &--light {
+    background-color: $white-color;
   }
-}
 
-#header {
-  overflow: hidden;
-  height: 25rem;
-  position: relative;
+  &--dark {
+    background-color: lighten($black-color, 15);
+    color: $white-color;
 
-  img {
+    h2 {
+      border-bottom-color: $white-color;
+    }
+  }
+
+  &__header {
+    overflow: hidden;
+    height: 25rem;
     position: relative;
-    height: 100%;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-    transition: all 0.4s ease-in-out;
-    filter: grayscale(50%);
+
+    img {
+      position: relative;
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+      object-position: center;
+      transition: all 0.4s ease-in-out;
+      filter: grayscale(50%);
+    }
   }
 
-  #close-btn {
+  &__close-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -58,42 +61,35 @@
     z-index: 1;
     cursor: pointer;
   }
-}
 
-#info-box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.5rem;
-
-  i + * {
-    color: $primary-color;
-    font-weight: bold;
+  &__wrapper {
+    padding: 2rem 2.5rem;
   }
-}
 
-#wrapper {
-  padding: 2rem 2.5rem;
-}
+  &__body {
+    line-height: 1.3;
 
-#body {
-  line-height: 1.3;
+    i + * {
+      color: $primary-color;
+      font-weight: bold;
+    }
+  }
 
-  h2 {
+  &__title {
     color: $primary-color;
     font-weight: 700;
     border-bottom: 1px solid transparentize($font-color, 0.6);
     padding-bottom: 2rem;
     margin-bottom: 2rem;
   }
-}
 
-#footer {
-  display: block;
-  text-align: center;
-  margin-top: 2rem;
+  &__footer {
+    display: block;
+    text-align: center;
+    margin-top: 2rem;
+  }
 
-  button {
+  &__button {
     border: 0;
     background: $primary-color;
     padding: 0.8rem 2.5rem;
